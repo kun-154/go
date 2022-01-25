@@ -1,0 +1,31 @@
+package main
+
+import "fmt"
+
+// 嵌套结构体 
+
+type Address struct {
+    province string
+    city string
+}
+
+
+type Person struct {
+    name string
+    age int
+    address Address
+}
+
+
+func main() {
+    p1 := Person{
+        name: "df",
+        age: 18,
+        address:Address{
+            province:"dd",
+            city:"df",
+        },
+    }
+    fmt.Printf("%#v\n", p1)
+    fmt.Println(p1.name, p1.age, p1.address)
+}
